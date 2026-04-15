@@ -1,8 +1,8 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import {
   Sheet,
-  SheetClose,
   SheetContent,
   SheetDescription,
   SheetFooter,
@@ -10,39 +10,50 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import Link from "next/link";
 const NavbarComponent = () => {
   return (
-    <header className="p-8">
+    <header>
       <nav className="flex items-center  justify-between">
         <h3>Jobora</h3>
-        <ul className="hidden">
+        <ul className="hidden md:flex md:gap-4 lg:gap-8">
           <li>Jobs</li>
           <li>Companies</li>
           <li>Services</li>
           <li>Community</li>
         </ul>
-        <Button className="hidden">Sign In</Button>
-        <Sheet>
-          <SheetTrigger>
-            <Menu />
-          </SheetTrigger>
-          <SheetContent>
-            {/* <SheetHeader>
-              <SheetTitle>Edit profile</SheetTitle>
-              <SheetDescription>
-                Make changes to your profile here. Click save when you&apos;re
-                done.
-              </SheetDescription>
-            </SheetHeader>
-
-            <SheetFooter>
-              <Button type="submit">Save changes</Button>
-              <SheetClose asChild>
-                <Button variant="outline">Close</Button>
-              </SheetClose>
-            </SheetFooter> */}
-          </SheetContent>
-        </Sheet>
+        <Link href="/sign-in">
+          <Button className="hidden md:block">Sign In</Button>
+        </Link>
+        {/* Mobile Navigation */}
+        <div className="md:hidden">
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button>
+                <Menu />
+              </Button>
+            </SheetTrigger>
+            <SheetContent>
+              <SheetHeader>
+                <SheetTitle>Menu</SheetTitle>
+                <SheetDescription className="sr-only">
+                  Navigation menu
+                </SheetDescription>
+              </SheetHeader>
+              <div className="p-8">
+                <ul className="flex flex-col gap-8 uppercase">
+                  <li>Jobs</li>
+                  <li>Companies</li>
+                  <li>Services</li>
+                  <li>Community</li>
+                </ul>
+              </div>
+              <SheetFooter>
+                <Button>Sign In</Button>
+              </SheetFooter>
+            </SheetContent>
+          </Sheet>
+        </div>
       </nav>
     </header>
   );

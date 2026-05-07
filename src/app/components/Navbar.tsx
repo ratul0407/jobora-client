@@ -11,16 +11,26 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Link from "next/link";
+import FadeOutParagraph from "./FadeOutParagraph";
 const NavbarComponent = () => {
   return (
     <header>
       <nav className="flex items-center  justify-between">
         <h3>Jobora</h3>
         <ul className="hidden md:flex md:gap-4 lg:gap-8">
-          <li>Jobs</li>
-          <li>Companies</li>
-          <li>Services</li>
-          <li>Community</li>
+          <li>
+            <FadeOutParagraph text="jobs" />
+          </li>
+
+          <li>
+            <FadeOutParagraph text="companies" />
+          </li>
+          <li>
+            <FadeOutParagraph text="services" />
+          </li>
+          <li>
+            <FadeOutParagraph text="community" />
+          </li>
         </ul>
         <Link href="/sign-in">
           <Button className="hidden md:block">Sign In</Button>

@@ -1,3 +1,4 @@
+import FadeOutParagraph from "../FadeOutParagraph";
 import DotsField from "./DotsField/DotsField";
 
 const Footer = () => {
@@ -8,19 +9,35 @@ const Footer = () => {
           <h3 className="text-8xl md:text-9xl font-semibold">Jobora</h3>
           <div className="space-y-12 md:flex md:flex-col gap-20">
             <ul className="grid grid-cols-2 gap-4 *:font-semibold *:text-lg md:gap-x-24">
-              <li>JOBS</li>
-              <li>COMPANIES</li>
-              <li>SERVICES</li>
-              <li>COMMUNITY</li>
+              <li>
+                <FadeOutParagraph text="JOBS" />
+              </li>
+              <li>
+                <FadeOutParagraph text="COMPANIES" />
+              </li>
+              <li>
+                <FadeOutParagraph text="SERVICES" />
+              </li>
+              <li>
+                <FadeOutParagraph text="COMMUNITY" />
+              </li>
             </ul>
             <div>
               <ul className="grid grid-cols-2 *:text-gray-400 *:text-lg *:font-semibold md:gap-x-24">
                 <div className="space-y-4">
-                  <li>Privacy Policy</li>
-                  <li>Terms of Service</li>
-                  <li>Cookie Policy</li>
+                  <li>
+                    <FadeOutParagraph text="Privacy Policy" />
+                  </li>
+                  <li>
+                    <FadeOutParagraph text="Terms of Service" />
+                  </li>
+                  <li>
+                    <FadeOutParagraph text="Cookie Policy" />
+                  </li>
                 </div>
-                <li>Instagram</li>
+                <li>
+                  <FadeOutParagraph text="Instagram" />
+                </li>
               </ul>
             </div>
           </div>

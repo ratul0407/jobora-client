@@ -4,7 +4,7 @@ import DotsField from "./DotsField/DotsField";
 const Footer = () => {
   return (
     <footer className="p-2">
-      <div className="min-h-[98vh]  justify-between flex flex-col bg-zinc-100 rounded-4xl md:rounded-[5rem] px-4 pt-4 pb-8 md:px-8 md:pt-8 md:pb-12">
+      <div className="min-h-[98vh]  justify-between flex flex-col bg-orange-50 rounded-4xl md:rounded-[5rem] px-4 pt-4 pb-8 md:px-8 md:pt-8 md:pb-12">
         <div className="space-y-12 md:flex md:justify-between md:px-20 md:pt-10">
           <h3 className="text-8xl md:text-9xl font-semibold">Jobora</h3>
           <div className="space-y-12 md:flex md:flex-col gap-20">

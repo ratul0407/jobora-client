@@ -12,25 +12,47 @@ import {
 } from "@/components/ui/sheet";
 import Link from "next/link";
 import FadeOutParagraph from "./FadeOutParagraph";
+const navItems = [
+  {
+    title: "Jobs",
+    href: "/jobs",
+  },
+  {
+    title: "Companies",
+    href: "/companies",
+  },
+  {
+    title: "Services",
+    href: "/services",
+  },
+  {
+    title: "Community",
+    href: "/community",
+  },
+  {
+    title: "About Us",
+    href: "/about-us",
+  },
+  {
+    title: "Contact Us",
+    href: "/contact-us",
+  },
+];
 const NavbarComponent = () => {
   return (
     <header>
       <nav className="flex items-center  justify-between">
-        <h3>Jobora</h3>
+        <h3>
+          <Link href="/">Jobora</Link>
+        </h3>
         <ul className="hidden md:flex md:gap-4 lg:gap-8">
-          <li>
-            <FadeOutParagraph text="jobs" />
-          </li>
-
-          <li>
-            <FadeOutParagraph text="companies" />
-          </li>
-          <li>
-            <FadeOutParagraph text="services" />
-          </li>
-          <li>
-            <FadeOutParagraph text="community" />
-          </li>
+          {navItems.map((item, index) => (
+            <li key={index}>
+              <Link href={item.href}>
+                <FadeOutParagraph text={item.title} />
+              </Link>
+            </li>
+          ))}
         </ul>
         <Link href="/sign-in">
           <Button className="hidden md:block">Sign In</Button>

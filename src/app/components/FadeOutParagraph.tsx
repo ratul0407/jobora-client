@@ -37,7 +37,7 @@ export default function FadeOutParagraph({
         duration: 0.18,
         ease: "power2.in",
         stagger: {
-          each: 0.025,
+          each: 0.015,
           from: "start",
         },
       })

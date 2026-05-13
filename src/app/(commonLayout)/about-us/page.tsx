@@ -2,19 +2,11 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkle } from "lucide-react";
 import Image from "next/image";
 import AboutUsCard from "./components/AboutUsCard";
+import FAQ from "./components/FAQ";
+import SectionHeading from "@/components/shared/Heading";
 const AboutUsPage = () => {
   return (
-    <div className="space-y-8 md:space-y-12">
-      {/* <div className="min-h-screen">
-        <div className="flex items-start justify-start w-auto absolute top-0 min-h-screen min-w-screen right-0 border -z-2 mt-8 flex-justify-center">
-          <video
-            src="https://res.cloudinary.com/dytwdaqzu/video/upload/v1778425622/46285-446732353_lsuqkz.mp4?tr=w-800"
-            autoPlay
-            muted
-            loop
-          />
-        </div>
-      </div> */}
+    <div className="space-y-8 md:space-y-12 mb-20">
       <div className="flex flex-col gap-8 md:flex-row md:gap-16 md:*:py-8 lg:border-y ">
         <div className="space-y-4 md:space-y-12">
           <p className="text-orange-500 font-semibold uppercase">
@@ -31,10 +23,11 @@ const AboutUsPage = () => {
         </div>
         <div className="hidden lg:block w-px bg-border self-stretch"></div>
         <div className="space-y-12">
-          <h3 className="text-black/60 font-semibold text-3xl sm:text-4xl md:text-6xl">
-            We exist only for companies who speak louder, stand taller and never
-            apologize <span className="text-black">for taking up space.</span>
-          </h3>
+          <SectionHeading
+            gray=" We exist only for companies who speak louder, stand taller and never
+            apologize"
+            black="for taking up space."
+          />
           <div className="flex justify-between items-center">
             <Button className="py-8 px-6 rounded-full flex gap-4 cursor-pointer">
               Contact Us{" "}
@@ -66,6 +59,7 @@ const AboutUsPage = () => {
       </div>
       {/* About Us Cards */}
       <AboutUsCard />
+      <FAQ />
     </div>
   );
 };
